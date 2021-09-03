@@ -39,20 +39,20 @@
             <a href="" class="logo">
                 <img class="bhx-logo" src="./img/logomain.jpg" alt="">
             </a>
-            <div class="popup-overlays"></div>
+            <div class="popup-overlays" id="popup-overlays" onclick="closeNav()"></div>
             <div class="locationContainer">
                 <div class="locationUser">
                     <div class="location_left">
                         <i class=" bhx-toggle fas fa-map-marker-alt"></i>
                         <div class="pulse"></div>
-                        <div class="current_locate">
+                        <div class="current_locate" onclick="openNav()">
                             <span class="shipto">Giao tại : </span>
                             <span class="shiptoHere">Quận 3, TP.HCM</span>
                             <span class="change">Thay đổi</span>
                         </div>
                         <div class="clr"></div>
                     </div>
-                    <div class="location showlocation">
+                    <div class="location showlocation" id="showlocation">
                         <div class="tooltip ">
                             <div class="content hidden">
                                 Quý khách vui lòng cho biết thêm
@@ -64,7 +64,7 @@
                         </div>
                         <div class="title-box">
                             <div class="title prov">Chọn tỉnh, thành phố</div>
-                            <a href="" class="closes">✕</a>
+                            <a href="javascript:void(0)" class="closes" onclick="closeNav()">✕</a>
                         </div>
                         <div class="box-search-province">
                             <form class="input-search" action="">
@@ -90,7 +90,19 @@
 
 
     </header>
+    <script>
+        function openNav() {
+            document.getElementById("popup-overlays").style.display = 'block';
+            document.getElementById("showlocation").style.display = 'block';
 
+        }
+
+        function closeNav() {
+            document.getElementById("popup-overlays").style.display = 'none';
+            document.getElementById("showlocation").style.display = 'none';
+
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
