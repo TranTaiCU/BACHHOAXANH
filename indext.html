@@ -37,76 +37,154 @@
     <header class="sticky" style="top: 0px;position: fixed;">
         <div class="tophead">
             <a href="" class="logo">
-                <img class="bhx-logo" src="./img/logomain.jpg" alt="">
+                <i class="bhx-logo"></i>
             </a>
-            <div class="popup-overlays" id="popup-overlays" onclick="closeNav()"></div>
+            <div class="popup-overlays"></div>
             <div class="locationContainer">
-                <div class="locationUser">
-                    <div class="location_left">
-                        <i class=" bhx-toggle fas fa-map-marker-alt"></i>
-                        <div class="pulse"></div>
-                        <div class="current_locate" onclick="openNav()">
-                            <span class="shipto">Giao tại : </span>
-                            <span class="shiptoHere">Quận 3, TP.HCM</span>
-                            <span class="change">Thay đổi</span>
-                        </div>
-                        <div class="clr"></div>
-                    </div>
-                    <div class="location showlocation" id="showlocation">
-                        <div class="tooltip ">
-                            <div class="content hidden">
-                                Quý khách vui lòng cho biết thêm
-                                <b>Địa Chỉ Nhận Hàng</b> để BachhoaXANH.com chuẩn bị đủ hàng và giao nhanh chóng!
-                            </div>
-                        </div>
-                        <div class="chooseLocation">
-                            <span>Khu vực đã chọn: Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh </span>
-                        </div>
-                        <div class="title-box">
-                            <div class="title prov">Chọn tỉnh, thành phố</div>
-                            <a href="javascript:void(0)" class="closes" onclick="closeNav()">✕</a>
-                        </div>
-                        <div class="box-search-province">
-                            <form class="input-search" action="">
-                                <div class="easy-autocomplete">
-                                    <input type="text" placeholder="Tìm nhanh phường xã, quận huyện" name="" id="">
-                                    <i class=" bhx-search fas fa-search"></i>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
+                <div class="locationUser"></div>
             </div>
-
-
             <div class="hiscart">
                 <form action="" class="mainsearch" onsubmit="return mainSearch.submitSearch(this)">
-                    <div class="easy-autocomplete" style="width:385px;"></div>
+                    <div class="easy-autocomplete" style="width:385px;">
+                        <input type="text" class="text-search" placeholder="Tìm kiếm hơn 10k sản phẩm">
+                        <div class="easy-autocomplete-container">
+
+                            <ul class="active">
+                                <li>
+                                    <div class="eac-item">
+                                        <div class="search-item">
+                                            <div class="viewdetail">
+                                                <div class="pic">
+                                                    <img src="https://cdn.tgdd.vn/Products/Images/56/197812/bhx/vi-2-vien-pin-tieu-aa-panasonic-pana-alkaline-lr6t-2b-v-202103031534337713_300x300.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <a href="" class="name">
+                                                        <h3>Vỉ 2 viên Pin tiểu AA Panasonic Pana Alkaline LR6T/2B-V</h3>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong>30.000₫</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="buys">
+                                                <a href="" class="btnbuy">Chọn mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="eac-item">
+                                        <div class="search-item">
+                                            <div class="viewdetail">
+                                                <div class="pic">
+                                                    <img src="https://cdn.tgdd.vn/Products/Images/2286/177828/bhx/dau-an-cao-cap-tuong-an-gold-chai-1-lit-202105201324008992_300x300.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <a href="" class="name">
+                                                        <h3>Dầu ăn cao cấp Tường An Gold chai 1 lít</h3>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong>175.000₫</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="buys">
+                                                <a href="" class="btnbuy">Chọn mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="eac-item">
+                                        <div class="search-item">
+                                            <div class="viewdetail">
+                                                <div class="pic">
+                                                    <img src="https://cdn.tgdd.vn/Products/Images/3023/197390/bhx/nuoc-xa-cho-be-comfort-cho-da-nhay-cam-huong-phan-tui-32-lit-202106100947357410.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <a href="" class="name">
+                                                        <h3>Nước xả cho bé Comfort cho da nhạy cảm hương phấn túi 3.2 lít</h3>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong>216.000₫</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="buys">
+                                                <a href="" class="btnbuy">Chọn mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="eac-item">
+                                        <div class="search-item">
+                                            <div class="viewdetail">
+                                                <div class="pic">
+                                                    <img src="https://cdn.tgdd.vn/Products/Images/3004/232449/bhx/khan-giay-an-hlp-1-lop-goi-100-to-202104231054488286_300x300.jpg" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <a href="" class="name">
+                                                        <h3>Khăn giấy ăn HLP 1 lớp gói 100 tờ</h3>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong>16.000₫</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="buys">
+                                                <a href="" class="btnbuy">Chọn mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="selected">
+                                    <div class="eac-item">
+                                        <a href="" class="s-viewmore">
+                                            Không tìm thấy kết quả với từ khóa 
+                                            <b></b>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="reset">
+                            <i class="bhx-closemenu"></i>
+                        </div>
+                        <button type="submit">
+                            <i class="bhx-search"></i>
+                            <div class="btn-search">
+                                <span>TÌM</span>
+                            </div>
+                        </button>
+                    </div>
                 </form>
+                <a href="" class="histories">Đơn hàng
+                    <br>
+                    của bạn
+                </a>
+                <a href="" class="temcart">
+                    <div>
+                        <i class="bhx-cart">
+                            <span class="hidden">0</span>
+                        </i>
+                    </div>
+                    <div>
+                        <b class="card">Giỏ hàng</b>
+                    </div>
+                </a>
             </div>
         </div>
 
 
 
     </header>
-    <script>
-        function openNav() {
-            document.getElementById("popup-overlays").style.display = 'block';
-            document.getElementById("showlocation").style.display = 'block';
 
-        }
-
-        function closeNav() {
-            document.getElementById("popup-overlays").style.display = 'none';
-            document.getElementById("showlocation").style.display = 'none';
-
-        }
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
