@@ -24,7 +24,7 @@ searchItems.onkeyup = function(e) {
                 document.querySelector('.selected').style.display = 'none'
             } else {
                 listItems[i].style.display = 'none'
-                document.getElementsByTagName('b')[0].innerHTML = filter;
+                document.querySelector('.showtext').innerHTML = filter;
                 document.querySelector('.selected').style.display = 'block'
 
             }
@@ -39,4 +39,18 @@ resetButton.onclick = function(e) {
     searchButton.style.display = 'none'
     searchIcon.style.display = 'block'
     document.querySelector('.text-search').value = '';
+}
+// accordion
+var changeList = document.querySelectorAll('.nav-parent')
+for( var i=0; i<changeList.length;i++){
+    changeList[i].addEventListener("click",function(){
+        this.classList.toggle("parent-open")
+        var ItemsList = this.nextElementSibling;
+        if(ItemsList.style.maxHeight){
+            ItemsList.style.maxHeight = null;
+        }
+        else{
+            ItemsList.style.maxHeight = ItemsList.scrollHeight+'px';
+        }
+    })
 }
