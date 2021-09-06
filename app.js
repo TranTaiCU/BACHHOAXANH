@@ -41,19 +41,19 @@ resetButton.onclick = function (e) {
     document.querySelector('.text-search').value = '';
 }
 // accordion
-// var changeList = document.querySelectorAll('.nav-parent')
-// for( var i=0; i<changeList.length;i++){
-//     changeList[i].addEventListener("click",function(){
-//         this.classList.toggle("parent-open")
-//         var ItemsList = this.nextElementSibling;
-//         if(ItemsList.style.maxHeight){
-//             ItemsList.style.maxHeight = null;
-//         }
-//         else{
-//             ItemsList.style.maxHeight = ItemsList.scrollHeight+'px';
-//         }
-//     })
-// }
+ var changeList = document.querySelectorAll('.nav-parent')
+  for( var i=0; i<changeList.length;i++){
+      changeList[i].addEventListener("click",function(){
+          this.classList.toggle("parent-open")
+          var ItemsList = this.nextElementSibling;
+         if(ItemsList.style.maxHeight){
+              ItemsList.style.maxHeight = null;
+          }
+          else{
+              ItemsList.style.maxHeight = ItemsList.scrollHeight+'px';
+          }
+      })
+  }
 // mainsearch
 // menu button
 var MenuButton = document.querySelector('.menu')
@@ -63,7 +63,7 @@ MenuButton.onclick = function (e) {
 // close menu mainnav
 var closeMenu = document.querySelector('.closemenu')
 closeMenu.onclick = function (e) {
-    document.querySelector('.mainnav').style.transform = 'translateX(100%)'
+    document.querySelector('.mainnav').style.transform = 'translateX(-100%)'
 }
 // scroll to item
 const filterButtons = document.querySelectorAll('.menu-item');
@@ -115,5 +115,25 @@ listEle.onscroll = (e) => {
         })
     }
 }
-
-
+// SliderShow
+var slideIndex =0;
+showSlides();
+function showSlides(){
+    var SliderShow = document.querySelectorAll('.owl-item');
+    for( var i=0; i<SliderShow.length;i++){
+        SliderShow[i].style.display='none'
+    }
+    slideIndex++;
+    if(slideIndex > SliderShow.length) slideIndex =1
+    SliderShow[slideIndex-1].style.display='block'
+    setTimeout(showSlides,2000);// change image  every 2 second 
+}
+// show list items
+var groupMenu = document.querySelector('.groupmenu ')
+window.onscroll = function() {scrollFunction()};
+function scrollFunction(){
+    if(document.body.scrollTop>100 || document.documentElement.scrollTop > 100){
+        groupMenu.style.display ='block'
+    }
+    else groupMenu.style.display='none'
+}
