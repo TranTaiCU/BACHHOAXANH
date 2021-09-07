@@ -128,12 +128,22 @@ function showSlides(){
     SliderShow[slideIndex-1].style.display='block'
     setTimeout(showSlides,2000);// change image  every 2 second 
 }
-// show list items
-var groupMenu = document.querySelector('.groupmenu ')
+// show  back-top
+const BackTop = document.querySelector('#back-top ')
+const groupMenu = document.querySelector('.groupmenu ')
 window.onscroll = function() {scrollFunction()};
 function scrollFunction(){
-    if(document.body.scrollTop>100 || document.documentElement.scrollTop > 100){
+    if(document.body.scrollTop>20 || document.documentElement.scrollTop > 20){
+        BackTop.style.display ='block'
         groupMenu.style.display ='block'
     }
-    else groupMenu.style.display='none'
+    else {
+        BackTop.style.display='none'
+        groupMenu.style.display='none'
+    }
 }
+BackTop.onclick = function(e){
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0
+}
+// show list-item
